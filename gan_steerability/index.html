@@ -1,0 +1,308 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <title>GAN Steerability</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <script type="text/javascript" src="jquery.mlens-1.0.min.js"></script>
+    <script type="text/javascript" src="jquery.js"></script>
+    <style>
+        body {
+            font-family: 'Open-Sans', sans-serif;
+            font-weight: 300;
+            background-color: #fff;
+        }
+
+        .content {
+            width: 1000px;
+            padding: 25px 50px;
+            margin: 25px auto;
+            background-color: white;
+            box-shadow: 0px 0px 10px #999;
+            border-radius: 15px;
+        }
+
+        .contentblock {
+            width: 950px;
+            margin: 0 auto;
+            padding: 0;
+            border-spacing: 25px 0;
+        }
+
+        .contentblock td {
+            background-color: #fff;
+            padding: 25px 50px;
+            vertical-align: top;
+            box-shadow: 0px 0px 10px #999;
+            border-radius: 15px;
+        }
+
+        a,
+        a:visited {
+            color: #224b8d;
+            font-weight: 300;
+        }
+
+        #authors {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        #conference {
+            text-align: center;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        #authors a {
+            margin: 0 10px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 35px;
+            font-weight: 300;
+        }
+
+        h2 {
+            font-size: 30px;
+            font-weight: 300;
+        }
+
+        code {
+            display: block;
+            padding: 10px;
+            margin: 10px 10px;
+        }
+
+        p {
+            line-height: 25px;
+            text-align: justify;
+        }
+
+        p code {
+            display: inline;
+            padding: 0;
+            margin: 0;
+        }
+
+        #teasers {
+            margin: 0 auto;
+        }
+
+        #teasers td {
+            margin: 0 auto;
+            text-align: center;
+            padding: 5px;
+        }
+
+        #teasers img {
+            width: 250px;
+        }
+
+        #results img {
+            width: 133px;
+        }
+
+        #seeintodark {
+            margin: 0 auto;
+        }
+
+        #sift {
+            margin: 0 auto;
+        }
+
+        #sift img {
+            width: 250px;
+        }
+
+        .downloadpaper {
+            padding-left: 20px;
+            float: right;
+            text-align: center;
+        }
+
+        .downloadpaper a {
+            font-weight: bold;
+            text-align: center;
+        }
+
+        #demoframe {
+            border: 0;
+            padding: 0;
+            margin: 0;
+            width: 100%;
+            height: 340px;
+        }
+
+        #feedbackform {
+            border: 1px solid #ccc;
+            margin: 0 auto;
+            border-radius: 15px;
+        }
+
+        #eyeglass {
+            height: 530px;
+        }
+
+        #eyeglass #wrapper {
+            position: relative;
+            height: auto;
+            margin: 0 auto;
+            float: left;
+            width: 800px;
+        }
+
+        #mitnews {
+            font-weight: normal;
+            margin-top: 20px;
+            font-size: 14px;
+            width: 220px;
+        }
+
+        #mitnews a {
+            font-weight: normal;
+        }
+
+        .teaser-img {
+            width: 100%;
+        }
+
+        .iframe {
+            width: 100%;
+            height: 125%
+        }
+    </style>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-98008272-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-98008272-2');
+    </script>
+    <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML">
+    </script>
+
+</head>
+
+<body>
+
+    <div class="content">
+        <h1>On the "steerability" of generative adversarial networks</h1>
+
+        <p id="authors">
+            <a href="http://people.csail.mit.edu/jahanian/">Ali Jahanian*</a>
+            <a href="http://people.csail.mit.edu/lrchai/">Lucy Chai*</a>
+            <a href="http://web.mit.edu/phillipi/">Phillip Isola</a><br>
+            <!-- <strong>MIT Computer Science and Artificial Intelligence Laboratory</strong> -->
+            MIT Computer Science and Artificial Intelligence Laboratory
+        </p>
+        <p>
+            <img class='teaser-img' src='img/teaser.png'></img>
+        </p>
+
+
+        <div class="downloadpaper">
+            <br>
+            <!-- <a href="http://openaccess.thecvf.com/content_ECCV_2018/papers/Bolei_Zhou_Temporal_Relational_Reasoning_ECCV_2018_paper.pdf"><img -->
+            <!-- src="eccv_cover_trn.png" width="160px" border="2"></a> -->
+
+            <!-- <br><br>Download -->
+            <!-- TRN Paper</a> -->
+            <a href="https://arxiv.org/pdf/1906.10112.pdf"><img src="img/cover.png" width="160px" border="2">
+                <p style="text-align: center;"><a href="https://github.com/ali-design/"
+                        target="_blank">[GitHub Code]</a></p>
+        </div>
+
+        <p>An open secret in contemporary machine learning is that
+many models work beautifully on standard benchmarks but
+fail to generalize outside the lab. This has been attributed
+to the fact that the models are trained on biased datasets,
+which provide poor coverage over real world events. Generative
+models are no exception, but recent advances in generative
+adversarial networks (GANs) make it look otherwise -- these models can now synthesize strikingly realistic and
+diverse images. Is generative modeling of photos a solved
+problem? We show that although current GANs can fit standard
+datasets very well, they still fall far short of being comprehensive
+models of the visual manifold. In particular, we
+study their ability to fit simple visual transformations such
+as camera movements and color changes. We find that the
+models reflect the biases of the datasets on which they are
+trained (e.g., centered objects), but that they also exhibit
+some capacity for generalization: by "steering" in latent
+space, we can shift the distribution while still creating realistic
+images. We hypothesize that the degree of distributional
+shift is related to the breadth of the training data distribution,
+and conduct experiments that demonstrate this.</p>
+
+
+        <br clear="all">
+    </div>
+<!--
+    <div class="content" id="overview">
+
+        <h2>Interactive GANalyzer</h2>
+        <iframe class='iframe' src='http://memgame.csail.mit.edu/explorer/browse_examples.html#surprise'></iframe>
+    </div>
+-->
+<!--
+    <div class="content" id="overview">
+
+        <h2>The GANalyze framework</h2>
+        <p>
+            Our framework consists of the following interacting components:
+            <ul>
+                <li><strong>Generator \(G\): </strong>Given a latent noise vector \(z\) and class label \(y\), the
+                    generator produces a photorealistic image \(G(z, y)\).</li>
+                <li><strong>Assessor \(A\): </strong>Assigns a numerical value to an image indicating the magnitude of
+                    an cognitive property of interest.</li>
+                <li><strong>Transformer \(T\): </strong>A function that moves the input \(z\) along a certain direction
+                    \(\theta\) in the latent space of \(G\).</li>
+            </ul>
+        </p>
+        <p> Our model learns how to transform a \(z\) vector such that when fed to a
+            Generator,the resulting image's property of interest changes. The transformation is achieved by
+            the Transformer, which moves the \(z\) vector along a learned direction, \(\theta\), in the Generator's
+            latent space. The
+            property of interest (e.g., memorability) is predicted by an Assessor module (e.g., MemNet). Finally,
+            \(\alpha\) acts as
+            knob to set the degree of change one wants to achieve in the Assessor value (e.g., MemNet score). It tells
+            the Transformer how far exactly to move along \(\theta\). The process is outlined in the schematic below.
+            <p align="center"><img src="img/method_schematic.png" width="100%"></p>
+            Please refer to the <a href="#">paper</a> for additional details.</p>
+
+    </div>
+-->
+    <div class="content" id="references">
+
+        <h2>Reference</h2>
+
+        <p>A. Jahanian, L. Chai, and P. Isola. On the "steerability" of generative adversarial networks., 2019.</p>
+
+        <code>
+            @article{,<br>
+            &nbsp;&nbsp;title={On the "steerability" of generative adversarial networks},<br>
+            &nbsp;&nbsp;author={Jahanian, Ali and Chai, Lucy and Isola, Phillip},<br>
+            &nbsp;&nbsp;journal={arXiv preprint arXiv:1907.11},<br>
+            &nbsp;&nbsp;year={2019}<br>
+            }
+        </code>
+
+<!--
+        <p><strong>Acknowledgement</strong>: <br>
+            This work was partly funded by NSF award 1532591 in Neural and Cognitive Systems (to A.O), by a fellowship (Grant 1108116N) and a travel grant (Grant V4.085.18N) awarded to Lore Goetschalckx by the Research Foundation - Flanders (FWO).
+            <p><strong>Disclaimer</strong>: The views and conclusions contained herein are those of the authors and
+                should not be interpreted as necessarily representing the official policies or endorsements, either
+                expressed or implied, of IARPA, DOI/IBC, or the U.S.
+            </p>
+-->
+    </div>
+</body>
+
+</html>
