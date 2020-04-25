@@ -175,6 +175,7 @@
         }
     </style>
     <!-- Global site tag (gtag.js) - Google Analytics -->
+		<!--
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-98008272-2"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -188,6 +189,7 @@
     <script type="text/javascript" async
         src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML">
     </script>
+		-->
 
 </head>
 
@@ -203,24 +205,26 @@
             <!-- <strong>MIT Computer Science and Artificial Intelligence Laboratory</strong> -->
             MIT Computer Science and Artificial Intelligence Laboratory
         </p>
+				<font size="+2">
+					<p style="text-align: center;">
+						<a href="https://arxiv.org/abs/1907.07171" target="_blank">[Paper]</a> &nbsp;&nbsp;&nbsp;&nbsp;
+						<a href="files/poster.pdf" target="_blank">[Poster]</a>  &nbsp;&nbsp;&nbsp;&nbsp;
+						<a href="https://github.com/ali-design/gan_steerability" target="_blank">[Code]</a>
+					</p>
+					</font>
         <p>
             <img class='teaser-img' src='img/teaser.png'></img>
         </p>
-
-
+				<!--
         <div class="downloadpaper">
             <br>
-            <!-- <a href="http://openaccess.thecvf.com/content_ECCV_2018/papers/Bolei_Zhou_Temporal_Relational_Reasoning_ECCV_2018_paper.pdf"><img -->
-            <!-- src="eccv_cover_trn.png" width="160px" border="2"></a> -->
-
-            <!-- <br><br>Download -->
-            <!-- TRN Paper</a> -->
             <a href="https://arxiv.org/pdf/1907.07171.pdf"><img src="img/cover.png" width="160px" border="2">
                 <p style="text-align: center;">
                     <a href="https://arxiv.org/pdf/1907.07171.pdf" target="_blank">[Paper]</a> 
                     <a href="https://github.com/ali-design/gan_steerability" target="_blank">[Code]</a>
                 </p>
         </div>
+				-->
 
         <p>An open secret in contemporary machine learning is that
 many models work beautifully on standard benchmarks but
@@ -246,41 +250,19 @@ and conduct experiments that demonstrate this.</p>
 
         <br clear="all">
     </div>
-<!--
-    <div class="content" id="overview">
-
-        <h2>Interactive GANalyzer</h2>
-        <iframe class='iframe' src='http://memgame.csail.mit.edu/explorer/browse_examples.html#surprise'></iframe>
+    <div class="content" id="poster">
+				<font size="+2">
+					<p style="text-align: center;">
+						Links to: &nbsp;&nbsp;
+						<a href="https://arxiv.org/abs/1907.07171" target="_blank">[Paper]</a> &nbsp;&nbsp;&nbsp;&nbsp;
+						<a href="files/poster.pdf" target="_blank">[Poster]</a>  &nbsp;&nbsp;&nbsp;&nbsp;
+						<a href="https://github.com/ali-design/gan_steerability" target="_blank">[Code]</a>
+					</p>
+					<p style="text-align: center;">
+					<a href="files/poster.pdf"><img src="img/poster_image.jpg" width="80%" border="2"></a>
+					</p>
+					</font>
     </div>
--->
-<!--
-    <div class="content" id="overview">
-
-        <h2>The GANalyze framework</h2>
-        <p>
-            Our framework consists of the following interacting components:
-            <ul>
-                <li><strong>Generator \(G\): </strong>Given a latent noise vector \(z\) and class label \(y\), the
-                    generator produces a photorealistic image \(G(z, y)\).</li>
-                <li><strong>Assessor \(A\): </strong>Assigns a numerical value to an image indicating the magnitude of
-                    an cognitive property of interest.</li>
-                <li><strong>Transformer \(T\): </strong>A function that moves the input \(z\) along a certain direction
-                    \(\theta\) in the latent space of \(G\).</li>
-            </ul>
-        </p>
-        <p> Our model learns how to transform a \(z\) vector such that when fed to a
-            Generator,the resulting image's property of interest changes. The transformation is achieved by
-            the Transformer, which moves the \(z\) vector along a learned direction, \(\theta\), in the Generator's
-            latent space. The
-            property of interest (e.g., memorability) is predicted by an Assessor module (e.g., MemNet). Finally,
-            \(\alpha\) acts as
-            knob to set the degree of change one wants to achieve in the Assessor value (e.g., MemNet score). It tells
-            the Transformer how far exactly to move along \(\theta\). The process is outlined in the schematic below.
-            <p align="center"><img src="img/method_schematic.png" width="100%"></p>
-            Please refer to the <a href="#">paper</a> for additional details.</p>
-
-    </div>
--->
     <div class="content" id="references">
 
         <h2>Reference</h2>
