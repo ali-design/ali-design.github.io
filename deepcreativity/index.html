@@ -106,7 +106,7 @@
 
         p {
             line-height: 25px;
-            text-align: justify;
+            text-align: left;
         }
 
         p code {
@@ -201,23 +201,51 @@
             width: 100%;
             height: 125%
         }
-    </style>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-		<!--
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-98008272-2"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
+        .speaker_info_container {
+            height: 9em;
+            display: flex;
         }
-        gtag('js', new Date());
-        gtag('config', 'UA-98008272-2');
-    </script>
-    <script type="text/javascript" async
-        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML">
-    </script>
-		-->
+        .speaker_image_container {
+            height: 100%;
+            width: 22%;
+        }
+        .speaker_info_content_wrapper{
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .speaker_img{
+            height: 95%;
+            width: 95%;
+            border-radius: 50%;
+        }
+        .speaker_info_box{
+            flex-grow: 1;
+            height: 100%;
+            width: 100%
+            max-height: 100%;
+            max-width: 100%;
+            resize: none;
+        }
+        .speaker_info_text{
+            position: absolute; 
+            height: 7em; 
+            width: 31em; 
+            padding-left: 1.5em;
+        }
+        a:link{
+            text-decoration: none;
+            color: black;
+        }
+        a:visited{
+            text-decoration: none;
+            color: black;
+        }
+        a:hover{
+            text-decoration: none;
+            color: purple;
+        }
+    </style>
 
 </head>
 
@@ -226,29 +254,12 @@
     <div class="content">
         <h1>MIT 6.S192: Deep Learning for Art, Aesthetics, and Creativity&nbsp; &nbsp; &nbsp;</h1>
 
-
-		
-
         <p>
             <img class='teaser-img' src='img/banner.png'></img>
 			<p>
 				<h5>Painting: Inspired by universal interconnectedness, inner transformation and neural networks, Natalia Wrobel, "There is a Universe Inside of You II," 2018, oil paint on canvas, 48" x 39", www.nataliaswrobel.com</h5>
 			</p>
         </p>
-				<!--
-        <div class="downloadpaper">
-            <br>
-            <a href="https://arxiv.org/pdf/1907.07171.pdf"><img src="img/cover.png" width="160px" border="2">
-                <p style="text-align: center;">
-                    <a href="https://arxiv.org/pdf/1907.07171.pdf" target="_blank">[Paper]</a> 
-                    <a href="https://github.com/ali-design/gan_steerability" target="_blank">[Code]</a>
-                </p>
-        </div>
-				-->
-
- 
-
-
         <br clear="all">
     </div>
   
@@ -258,73 +269,442 @@
     <tr>
       <th>Session #</th>
       <th>Date</th>		
-      <th>Speaker</th>
-      <th>Materials</th>
+      <th>Speaker(s)</th>
+      <th>Videos</th>
     </tr>
     <tr>
       <td width="10%">1</td>
-      <td width="20%">Friday 1/15/2021</td>
-      <td width="60%">Ali Jahanian </td>
-      <td width="10%">&nbsp;<a href="https://drive.google.com/drive/folders/1ROxSqjNOD-m8ZjR0LRB3XUdaVx8R7EXh?usp=sharing">slides</a></td>
+      <td width="10%">Friday <br>1/15/2021</td>
+      <td width="70%"> 
+        <div class="speaker_info_container">
+            <div class="speaker_image_container">
+                <img class="speaker_img" src="img/1.png"/>
+            </div>
+            
+            <div class="speaker_info_content_wrapper">
+                <div class="speaker_info_box">
+                    <p class="speaker_info_text">
+                    <b>Computational Aesthetics, Design, Art</b><br>
+					<b>Learning by Generating</b><br>
+                    <a href="https://people.csail.mit.edu/jahanian/" target=_blank><b><u>Ali Jahanian</u></b></a><br>
+                    Research Scientist at MIT [instrucor and organizer of this course]
+                    </p> 
+                </div>
+            
+            </div>
+        </div>
+      </td>
+      <td width="10%">&nbsp;<a href="https://drive.google.com/drive/folders/1ROxSqjNOD-m8ZjR0LRB3XUdaVx8R7EXh?usp=sharing">slides</a>
+          <br><br>
+          &nbsp;<a href=""https://youtu.be/MABLFo7IV3I>Jahanian</a>
+      </td>
     </tr>
+    
     <tr>
       <td>2</td>
-      <td>Tuesday 1/19/2021</td>
-      <td>Alyosha Efros and Phillip Isola</td>
-      <td>&nbsp;</td>
+      <td>Tuesday <br>1/19/2021</td>
+      <td> 
+        <div class="speaker_info_container">
+            <div class="speaker_image_container">
+                <!--CHANGE IMAGE HERE-->
+                <img class="speaker_img" src="img/2.jpg"/>
+            </div>
+            
+            <div class="speaker_info_content_wrapper">
+                <div class="speaker_info_box">
+                    <p class="speaker_info_text">
+                    <b>Generative Models as Data++</b><br>
+                    <a href="https://web.mit.edu/phillipi" target=_blank><b><u>Phillip Isola</u></b></a><br>
+                    Assistant professor at MIT
+                    </p> 
+                </div>
+            
+            </div>
+        </div>
+  
+        <div class="speaker_info_container">
+            <div class="speaker_image_container">
+                <!--CHANGE IMAGE HERE-->
+                <img class="speaker_img" src="img/efros.jpg"/>
+            </div>
+            
+            <div class="speaker_info_content_wrapper">
+                <div class="speaker_info_box">
+                    <p class="speaker_info_text">
+                    <b>Nostalgia -> Art -> Creativity -> Evolution as Data + Direction</b><br>
+                    <a href="http://people.eecs.berkeley.edu/~efros" target=_blank><b><u>Alyosha Efros</u></b></a><br>
+                    Professor at UC Berkley
+                    </p> 
+                </div>
+            
+            </div>
+        </div>
+      </td>
+      <td><a href=""https://youtu.be/tcAZ9KvBtkg>Efros and Isola</a></td>
     </tr>
+    
     <tr>
       <td>3</td>
-      <td>Wednesday 1/20/2021</td>
-      <td>Shiry Ginosar, Jun-Yan Zhu</td>
-      <td>&nbsp;</td>
-    </tr>
-	<tr>
-      <td>4</td>
-      <td>Thursday 1/21/2021</td>
-      <td>Mauro Martino, David Bau</td>
-      <td>&nbsp;</td>
-    </tr>
-	<tr>
-      <td>5</td>
-      <td>Friday 1/22/2021</td>
-      <td>Devi Parikh, Ahmed Elgammal</td>
-      <td>&nbsp;</td>
-    </tr>
-	<tr>
-      <td>6</td>
-      <td>Monday 1/25/2021</td>
-      <td>Rebecca Fiebrink, Tom White</td>
-      <td>&nbsp;</td>
-    </tr>
-	<tr>
-      <td>7</td>
-      <td>Tuesday 1/26/2021</td>
-      <td>Jesse Engel, Sofia Crespo and Feileacan McCormick</td>
-      <td>&nbsp;</td>
-    </tr>
-	<tr>
-      <td>8</td>
-      <td>Wednesday 1/27/2021</td>
-      <td>Jason Bailey, Jiajun Wu</td>
-      <td>&nbsp;</td>
-    </tr>
-	<tr>
-      <td>9</td>
-      <td>Thursday 1/28/2021</td>
-      <td>Jeff Clune, Joel Simon</td>
-      <td>&nbsp;</td>
-    </tr>
-	<tr>
-      <td>10</td>
-      <td>Friday 1/22/2021</td>
-      <td>Aaron Hertzmann, Zoya Bylinskii</td>
-      <td>&nbsp;</td>
+      <td>Wednesday <br>1/20/2021</td>
+      <td>
+        <div class="speaker_info_container">
+            <div class="speaker_image_container">
+                <!--CHANGE IMAGE HERE-->
+                <img class="speaker_img" src="img/portrait3_lr.jpg"/>
+            </div>
+            
+            <div class="speaker_info_content_wrapper">
+                <div class="speaker_info_box">
+                    <p class="speaker_info_text">
+                    <b>Efficient GANs</b><br>
+                    <a href="https://www.cs.cmu.edu/~junyanz" target=_blank><b><u>Jun-Yan Zhu</u></b></a><br>
+                    Assistant Professor, School of Computer Science, Carnegie Mellon University
+                    </p> 
+                </div>
+            
+            </div>
+        </div>
+
+        <div class="speaker_info_container">
+            <div class="speaker_image_container">
+                <!--CHANGE IMAGE HERE-->
+                <img class="speaker_img" src="img/shiry_cropped.jpg"/>
+            </div>
+            
+            <div class="speaker_info_content_wrapper">
+                <div class="speaker_info_box">
+                    <p class="speaker_info_text">
+                    <b>The Art Of Deception - Encountering Perception as a Creative Material</b><br>
+                    <a href="https://people.eecs.berkeley.edu/~shiry/" target=_blank><b><u>Shiry Ginosar</u></b></a><br>
+                    Computing Innovation Postdoctoral Fellow, UC Berkeley
+                    </p> 
+                </div>
+            
+            </div>
+        </div>
+      </td>
+      <td><a href="https://youtu.be/MQ7QEEB5oFQ">Zhu</a>
+          <br><br><a href="https://youtu.be/_3NTUZ4-RVM">Ginosar</a>
+      </td>
     </tr>
 
+    <tr>
+      <td>4</td>
+      <td>Thursday <br>1/21/2021</td>
+      <td>
+        <div class="speaker_info_container">
+            <div class="speaker_image_container">
+                <!--CHANGE IMAGE HERE-->
+                <img class="speaker_img" src="img/5.jpg"/>
+            </div>
+            
+            <div class="speaker_info_content_wrapper">
+                <div class="speaker_info_box">
+                    <p class="speaker_info_text">
+                <b>Painting with the Neurons of a GAN</b><br>
+                    <a href="https://people.csail.mit.edu/davidbau/home" target=_blank><b><u>David Bau</u></b></a><br>
+                    PhD Candidate at MIT
+                    </p> 
+                </div>
+            
+            </div>
+        </div>
+      </td>
+      <td><a href="https://youtu.be/aLEbcZiTCWM">Bau</a><br>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>Friday <br>1/22/2021</td>
+      <td>
+        <div class="speaker_info_container">
+            <div class="speaker_image_container">
+                <!--CHANGE IMAGE HERE-->
+                <img class="speaker_img" src="img/deviparikh.jpg"/>
+            </div>
+            
+            <div class="speaker_info_content_wrapper">
+                <div class="speaker_info_box">
+                    <p class="speaker_info_text">
+                    <b>Explorations in AI for Creatvity</b><br>
+                    <a href="https://www.cc.gatech.edu/~parikh/" target=_blank><b><u>Devi Parikh</u></b></a><br>
+                    Associate Professor at Georgia Tech<br> 
+                    Research Scientist at Facebook AI Research(FAIR)
+                    </p>
+                </div>
+            
+            </div>
+        </div>
+        
+        <div class="speaker_info_container">
+            <div class="speaker_image_container">
+                <!--CHANGE IMAGE HERE-->
+                <img class="speaker_img" src="img/ahmed-elgammal.jpg"/>
+            </div>
+            
+            <div class="speaker_info_content_wrapper">
+                <div class="speaker_info_box">
+                    <p class="speaker_info_text">
+                    <b>The Shape of Art History in the Eyes of the Machine</b><br>
+                    <a href="htts://sites.rutgers.edu/ahmed-elgammal/" target=_blank><b><u>Ahmed Elgammal</u></b></a><br>
+                    Professor at the Department of Computer Science at Rutgers University.
+                    </p> 
+                </div>
+            
+            </div>
+        </div>
+      </td>
+      <td><a href="https://youtu.be/vRGL_V3ZsBA">Parikh</a>
+          <br><br><a href="https://youtu.be/Xw1UrWb3XI8">Elgammal</a>
+      </td>
+    </tr>
+	
+    <tr>
+      <td>6</td>
+      <td>Monday <br>1/25/2021</td>
+      <td>
+        <div class="speaker_info_container">
+            <div class="speaker_image_container">
+                <!--CHANGE IMAGE HERE-->
+                <img class="speaker_img" src="img/IMG_9628-Edit.jpg"/>
+            </div>
+            
+            <div class="speaker_info_content_wrapper">
+                <div class="speaker_info_box">
+                    <p class="speaker_info_text">
+                    <b>How Machine Learning Can Benefit Human Creators</b><br>
+                    <a href="https://www.doc.gold.ac.uk/~/mas01rf/homepage/" target=_blank><b><u>Dr.Rebecca Fiebrink</u></b></a><br>
+               Reader at the Creative Computing Institute, University of the Arts London     
+                    </p> 
+                </div>
+            
+            </div>
+        </div>
+
+        <div class="speaker_info_container">
+            <div class="speaker_image_container">
+                <!--CHANGE IMAGE HERE-->
+                <img class="speaker_img" src="img/R235E508_400x400.jpg"/>
+            </div>
+            
+            <div class="speaker_info_content_wrapper">
+                <div class="speaker_info_box">
+                    <p class="speaker_info_text">
+                    <b>Neural Abstractions</b><br>
+                    <a href="http://drip.net" target=_blank><b><u>Tom White</u></b></a><br>
+                    Lecturer teaching computational design and creative AI at the Victoria University of Wellington School of Design.
+                    </p> 
+                </div>
+            
+            </div>
+        </div>
+      </td>
+      <td><a href="https://youtu.be/5PAgyGiCZEk">Fiebrink</a>
+          <br><br><a href="https://youtu.be/CU2NQyPeAH8">White</a>
+      </td>
+    </tr>
+    
+    <tr>
+      <td>7</td>
+      <td>Tuesday <br>1/26/2021</td>
+      <td>
+        <div class="speaker_info_container">
+            <div class="speaker_image_container">
+                <!--CHANGE IMAGE HERE-->
+                <img class="speaker_img" src="img/Me.jpg"/>
+            </div>
+            
+            <div class="speaker_info_content_wrapper">
+                <div class="speaker_info_box">
+                    <p class="speaker_info_text">
+                    <b>Magenta: Empowering creative agency with machine learning</b><br>
+                    <a href="https://jesseengel.github.io/about/" target=_blank><b><u>Jesse Engel</u></b></a><br>
+                    Staff Research Scientist, Google Brain
+                    </p> 
+                </div>
+            
+            </div>
+        </div>
+        <div class="speaker_info_container">
+            <div class="speaker_image_container">
+                <!--CHANGE IMAGE HERE-->
+                <img class="speaker_img" src="img/ppODXZqS_400x400.jpg"/>
+            </div>
+            
+            <div class="speaker_info_content_wrapper">
+                <div class="speaker_info_box">
+                    <p class="speaker_info_text">
+                    <b>Artificial Biodiversity</b><br>
+                    <a href="https://sofiacrepso.com/" target=_blank><b><u>Sofia Crepso</u></b></a><br>
+                    Computational Artist
+                    </p> 
+                </div>
+            
+            </div>
+        </div>        
+        <div class="speaker_info_container">
+            <div class="speaker_image_container">
+                <!--CHANGE IMAGE HERE-->
+                <img class="speaker_img" src="img/7qCxkXMB_400x400.jpg"/>
+            </div>
+            
+            <div class="speaker_info_content_wrapper">
+                <div class="speaker_info_box">
+                    <p class="speaker_info_text">
+                    <b>Artificial Biodiversity</b><br>
+                    <a href="https://entangledothers.studio/" target=_blank><b><u>Feileacan McCormick</u></b></a><br>
+                    Computational Artist
+                    </p> 
+                </div>
+            
+            </div>
+        </div>
+		  
+      </td>
+      <td><a href="https://youtu.be/oiPWOTr44qQ">Engel</a>
+          <br><br><a href="https://youtu.be/xDc9zSPzqvQ">Crepso and McCormick</a>
+      </td>
+    </tr>
+
+    <tr>
+      <td>8</td>
+      <td>Wednesday<br> 1/27/2021</td>
+      <td>
+        <div class="speaker_info_container">
+            <div class="speaker_image_container">
+                <!--CHANGE IMAGE HERE-->
+                <img class="speaker_img" src="img/image.png"/>
+            </div>
+            
+            <div class="speaker_info_content_wrapper">
+                <div class="speaker_info_box">
+                    <p class="speaker_info_text">
+                    <b>AI+Creativity, an Art Nerd's Perspective</b><br>
+                    <a href="https://www.artnome.com/" target=_blank><b><u>Jason Bailey</u></b></a><br>
+                    Founder at Artnome.com
+                    </p> 
+                </div>
+            
+            </div>
+        </div>
+
+        <div class="speaker_info_container">
+            <div class="speaker_image_container">
+                <!--CHANGE IMAGE HERE-->
+                <img class="speaker_img" src="img/Jiajun_Wu.jpg"/>
+            </div>
+            
+            <div class="speaker_info_content_wrapper">
+                <div class="speaker_info_box">
+                    <p class="speaker_info_text">
+                    <b>Surfacs, Objects, Procedures: Integrating Learning and Graphics for 3D Scene Understanding</b><br>
+                    <a href="https://jiajunwu.com/" target=_blank><b><u>Jiajun Wu</u></b></a><br>
+                    Assistant Professor, Stanford University
+                    </p> 
+                </div>
+            
+            </div>
+        </div>
+      </td>
+      <td><a href="https://youtu.be/4ti-DjN94Gw">Bailey</a>
+          <br><br><a href="https://youtu.be/COX2N7dYnSY">Wu</a>
+      </td>
+    </tr>
+    
+    <tr>
+      <td>9</td>
+      <td>Thursday<br> 1/28/2021</td>
+      <td>
+        <div class="speaker_info_container">
+            <div class="speaker_image_container">
+                <!--CHANGE IMAGE HERE-->
+                <img class="speaker_img" src="img/EOUNP5XJ.jpg"/>
+            </div>
+            
+            <div class="speaker_info_content_wrapper">
+                <div class="speaker_info_box">
+                    <p class="speaker_info_text">
+                    <b>Towards Creating Endlessly Creative Open-Ended Innovation Engines</b><br>
+                    <a href="http://jeffclune.com" target=_blank><b><u>Jeff Clune</u></b></a><br>
+                    Associate Professor, Computer Science, University of British Columbia, and Research Team Leader, OpenAI
+                    </p> 
+                </div>
+            
+            </div>
+        </div>
+
+        <div class="speaker_info_container">
+            <div class="speaker_image_container">
+                <!--CHANGE IMAGE HERE-->
+                <img class="speaker_img" src="img/LIeplDUo_400x400.jpg"/>
+            </div>
+            
+            <div class="speaker_info_content_wrapper">
+                <div class="speaker_info_box">
+                    <p class="speaker_info_text">
+                    <b>Creative-Networks</b><br>
+                    <a href="https://www.joelsimon.net" target=_blank><b><u>Joel Simon</u></b></a><br>
+                    Joel Simon is an artist, researcher and toolmaker inspired by the systems of biology and creativity
+                    </p> 
+                </div>
+            
+            </div>
+        </div>
+      </td>
+      <!--ADD VIDEO LINK HERE-->
+      <td><a href="https://youtu.be/UjWV33eToII">Clune</a>
+      <!--ADD VIDEO LINK HERE-->
+      <br><br><a href="https://youtu.be/I0V2UTKIei0">Simon</a>
+      </td>
+    </tr>
+
+    <tr>
+      <td>10</td>
+      <td>Friday<br> 1/22/2021</td>
+      <td> 
+        <div class="speaker_info_container">
+            <div class="speaker_image_container">
+                <!--CHANGE IMAGE HERE-->
+                <img class="speaker_img" src="img/file-20190220-148539-1af6coc.jpg"/>
+            </div>
+            
+            <div class="speaker_info_content_wrapper">
+                <div class="speaker_info_box">
+                    <p class="speaker_info_text">
+                    <b>Human Visual Perception of Art as Computation</b><br>
+                    <a href="https://research.adobe.com/person/aaron-hertzmann/" target=_blank><b><u>Aaron Hertzmann</u></b></a><br>
+                    Principal Scientist, Adobe
+                    </p> 
+                </div>
+            
+            </div>
+        </div>
+
+        <div class="speaker_info_container">
+            <div class="speaker_image_container">
+                <!--CHANGE IMAGE HERE-->
+                <img class="speaker_img" src="img/z_4_square.jpg"/>
+            </div>
+            
+            <div class="speaker_info_content_wrapper">
+                <div class="speaker_info_box">
+                    <p class="speaker_info_text">
+                    <b>Using AI in the service of Graphic Design</b><br>
+                    <a href="https://research.adobe.com/person/zoya-bylinskii" target=_blank><b><u>Zoya Bylinskii</u></b></a><br>
+                   Research Scientist, Creative Intelligence Lab, Adobe 
+                    </p> 
+                </div>
+            
+            </div>
+        </div>
+      </td>
+      <!--ADD VIDEO LINK HERE-->
+      <td><a href="https://youtu.be/AIljnjj4e4w">Hertzmann</a>
+          <!--ADD VIDEO LINK HERE-->
+          <br><br><a href="https://youtu.be/42cVkt0tua8">Bylinskii</a>
+      </td>
+    </tr>
   </tbody>
 </table>
-    </div>
 </body>
 
 </html>
