@@ -1,0 +1,270 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <title>GenRep</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <script type="text/javascript" src="jquery.mlens-1.0.min.js"></script>
+    <script type="text/javascript" src="jquery.js"></script>
+    <style>
+        body {
+            font-family: 'Open-Sans', sans-serif;
+            font-weight: 300;
+            background-color: #fff;
+        }
+
+        .content {
+            width: 1000px;
+            padding: 25px 50px;
+            margin: 25px auto;
+            background-color: white;
+            box-shadow: 0px 0px 10px #999;
+            border-radius: 15px;
+        }
+
+        .contentblock {
+            width: 950px;
+            margin: 0 auto;
+            padding: 0;
+            border-spacing: 25px 0;
+        }
+
+        .contentblock td {
+            background-color: #fff;
+            padding: 25px 50px;
+            vertical-align: top;
+            box-shadow: 0px 0px 10px #999;
+            border-radius: 15px;
+        }
+
+        a,
+        a:visited {
+            color: #224b8d;
+            font-weight: 300;
+        }
+
+        #authors {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        #conference {
+            text-align: center;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        #authors a {
+            margin: 0 10px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 30px;
+            font-weight: 300;
+        }
+
+        h2 {
+            font-size: 30px;
+            font-weight: 300;
+        }
+
+        code {
+            display: block;
+            padding: 10px;
+            margin: 10px 10px;
+        }
+
+        p {
+            line-height: 25px;
+            text-align: justify;
+        }
+
+        p code {
+            display: inline;
+            padding: 0;
+            margin: 0;
+        }
+
+        #teasers {
+            margin: 0 auto;
+        }
+
+        #teasers td {
+            margin: 0 auto;
+            text-align: center;
+            padding: 5px;
+        }
+
+        #teasers img {
+            width: 250px;
+        }
+
+        #results img {
+            width: 133px;
+        }
+
+        #seeintodark {
+            margin: 0 auto;
+        }
+
+        #sift {
+            margin: 0 auto;
+        }
+
+        #sift img {
+            width: 250px;
+        }
+
+        .downloadpaper {
+            padding-left: 20px;
+            float: right;
+            text-align: center;
+        }
+
+        .downloadpaper a {
+            font-weight: bold;
+            text-align: center;
+        }
+
+        #demoframe {
+            border: 0;
+            padding: 0;
+            margin: 0;
+            width: 100%;
+            height: 340px;
+        }
+
+        #feedbackform {
+            border: 1px solid #ccc;
+            margin: 0 auto;
+            border-radius: 15px;
+        }
+
+        #eyeglass {
+            height: 530px;
+        }
+
+        #eyeglass #wrapper {
+            position: relative;
+            height: auto;
+            margin: 0 auto;
+            float: left;
+            width: 800px;
+        }
+
+        #mitnews {
+            font-weight: normal;
+            margin-top: 20px;
+            font-size: 14px;
+            width: 220px;
+        }
+
+        #mitnews a {
+            font-weight: normal;
+        }
+
+        .teaser-img {
+            width: 70%;
+        }
+
+        .iframe {
+            width: 100%;
+            height: 125%
+        }
+    </style>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+		<!--
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-98008272-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-98008272-2');
+    </script>
+    <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML">
+    </script>
+		-->
+
+</head>
+
+<body>
+
+    <div class="content">
+        <h1>Generative Models as a Data Source for Visual Representation Learning</h1>
+
+        <p id="authors">
+            <a href="http://people.csail.mit.edu/jahanian/">Ali Jahanian</a>
+            <a href="https://people.csail.mit.edu/xavierpuig/">Xavier Puig</a>
+            <a href="https://people.csail.mit.edu/yonglong/">Yonglong Tian</a>
+            <a href="http://web.mit.edu/phillipi/">Phillip Isola</a><br>
+            <!-- <strong>MIT Computer Science and Artificial Intelligence Laboratory</strong> -->
+            MIT Computer Science and Artificial Intelligence Laboratory
+        </p>
+				<font size="+2">
+					<p style="text-align: center;">
+						<a href="https://arxiv.org/abs/" target="_blank">[Paper]</a> &nbsp;&nbsp;&nbsp;&nbsp;
+						<a href="https://github.com/ali-design/GenRep" target="_blank">[Code]</a> &nbsp;&nbsp;&nbsp;&nbsp;
+					</p>
+					</font>
+        <p style="text-align: center;">
+            <img class='teaser-img' src='img/teaser.png'></img>
+        </p>
+				<!--
+        <div class="downloadpaper">
+            <br>
+            <a href="https://arxiv.org/pdf/1907.07171.pdf"><img src="img/cover.png" width="160px" border="2">
+                <p style="text-align: center;">
+                    <a href="https://arxiv.org/pdf/1907.07171.pdf" target="_blank">[Paper]</a> 
+                    <a href="https://github.com/ali-design/gan_steerability" target="_blank">[Code]</a>
+                </p>
+        </div>
+				-->
+
+        <p>Generative models are now capable of producing highly realistic images that look nearly indistinguishable from the data on which they are trained. This raises the question: if we have good enough generative models, do we still need datasets? We investigate this question in the setting of learning general-purpose visual representations from a black-box generative model rather than directly from data. Given an off-the-shelf image generator without any access to its training data, we train representations from the samples output by this generator. We compare several representation learning methods that can be applied to this setting. We show that for contrastive methods, we can naturally use the latent space of the model to identify positive (nearby) and negative (far apart) pairs. We find that the resulting representations rival those learned directly from real data, but that good performance requires care in the sampling strategy applied and the training method. Generative models can be viewed as a compressed and organized copy of a dataset, and we envision a future where more and more "model zoos" proliferate while datasets become increasingly unwieldy, missing, or private. This paper suggests several techniques for dealing with visual representation learning in such a future.</p>
+
+
+        <br clear="all">
+    </div>
+    
+    <div class="content" id="references">
+
+        <h2>Reference</h2>
+
+        <p>A. Jahanian, X. Puig, Y. Tian, and P. Isola. Generative Models as a Data Source for Visual Representation Learning. 2021.</p>
+
+        <code>
+	<!--
+            @article{gansteerability,<br>
+            &nbsp;&nbsp;title={On the "steerability" of generative adversarial networks},<br>
+            &nbsp;&nbsp;author={Jahanian, Ali and Chai, Lucy and Isola, Phillip},<br>
+            &nbsp;&nbsp;journal={arXiv preprint arXiv:1907.07171},<br>
+            &nbsp;&nbsp;year={2019}<br>
+            }
+	-->
+	    
+			
+        </code>
+
+    </div>      
+    <div class="content" id="acknowledgements">
+          <p><strong>Acknowledgements</strong>: <br>
+              Author A.J. thanks Kamal Youcef-Toumi, Boris Katz, and Antonio Torralba for their support. We thank Antonio Torralba for helpful discussions.
+<p>This research was supported in part by IBM through the MIT-IBM Watson AI Lab. The research was also partly sponsored by the United States Air Force Research Laboratory and the United States Air Force Artificial Intelligence Accelerator and was accomplished under Cooperative Agreement Number FA8750-19-2-1000. The views and conclusions contained in this document are those of the authors and should not be interpreted as representing the official policies, either expressed or implied, of the United States Air Force or the U.S. Government. The U.S. Government is authorized to reproduce and distribute reprints for Government purposes notwithstanding any copyright notation herein. 
+ 
+<!--              Website template is borrowed from our <a href="http://ganalyze.csail.mit.edu/">memorable friends</a>.-->
+              <!--
+              <p><strong>Disclaimer</strong>: The views and conclusions contained herein are those of the authors and
+                  should not be interpreted as necessarily representing the official policies or endorsements, either
+                  expressed or implied, of IARPA, DOI/IBC, or the U.S.
+              </p>
+              -->
+    </div>
+</body>
+
+</html>
