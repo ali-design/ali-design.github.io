@@ -22,7 +22,15 @@
             box-shadow: 0px 0px 10px #999;
             border-radius: 15px;
         }
-
+        .content_acc {
+            width: 1000px;
+            padding: 0;
+            margin: 25px auto;
+            background-color: white;
+            box-shadow: 0px 0px 10px #999;
+            border-radius: 15px;
+			text-decoration: none;
+        }
         .contentblock {
             width: 950px;
             margin: 0 auto;
@@ -69,7 +77,12 @@
             font-size: 30px;
             font-weight: 300;
         }
-
+        h5 {
+            font-size: 10px;
+            font-weight: 300;
+			color:darkslategrey;
+			text-align: center;
+        }
         code {
             display: block;
             padding: 10px;
@@ -196,7 +209,7 @@
 <body>
 
     <div class="content">
-        <h1>Generative Models as a Data Source for Visual Representation Learning</h1>
+        <h1>Generative Models as a Data Source for Multiview Representation Learning</h1>
 
         <p id="authors">
             <a href="http://people.csail.mit.edu/jahanian/">Ali Jahanian</a>
@@ -213,7 +226,7 @@
 					</p>
 					</font>
         <p style="text-align: center;">
-            <img class='teaser-img' src='img/teaser.png'></img>
+            <img class="teaser-img" src='img/teaser.png'></img>
         </p>
 				<!--
         <div class="downloadpaper">
@@ -226,7 +239,7 @@
         </div>
 				-->
 
-        <p>Generative models are now capable of producing highly realistic images that look nearly indistinguishable from the data on which they are trained. This raises the question: if we have good enough generative models, do we still need datasets? We investigate this question in the setting of learning general-purpose visual representations from a black-box generative model rather than directly from data. Given an off-the-shelf image generator without any access to its training data, we train representations from the samples output by this generator. We compare several representation learning methods that can be applied to this setting. We show that for contrastive methods, we can naturally use the latent space of the model to identify positive (nearby) and negative (far apart) pairs. We find that the resulting representations rival those learned directly from real data, but that good performance requires care in the sampling strategy applied and the training method. Generative models can be viewed as a compressed and organized copy of a dataset, and we envision a future where more and more "model zoos" proliferate while datasets become increasingly unwieldy, missing, or private. This paper suggests several techniques for dealing with visual representation learning in such a future.</p>
+        <p>Generative models are now capable of producing highly realistic images that look nearly indistinguishable from the data on which they are trained. This raises the question: if we have good enough generative models, do we still need datasets? We investigate this question in the setting of learning general-purpose visual representations from a black-box generative model rather than directly from data. Given an off-the-shelf image generator without any access to its training data, we train representations from the samples output by this generator. We compare several representation learning methods that can be applied to this setting, using the latent space of the generator to generate multiple "views" of the same semantic content. We show that for contrastive methods, this multiview data can naturally be used to identify positive pairs (nearby in latent space) and negative pairs (far apart in latent space). We find that the resulting representations rival those learned directly from real data, but that good performance requires care in the sampling strategy applied and the training method. Generative models can be viewed as a compressed and organized copy of a dataset, and we envision a future where more and more "model zoos" proliferate while datasets become increasingly unwieldy, missing, or private. This paper suggests several techniques for dealing with visual representation learning in such a future.</p>
 
 
         <br clear="all">
@@ -254,8 +267,9 @@
     </div>      
     <div class="content" id="acknowledgements">
           <p><strong>Acknowledgements</strong>: <br>
-              Author A.J. thanks Kamal Youcef-Toumi, Boris Katz, and Antonio Torralba for their support. We thank Antonio Torralba for helpful discussions.
+              Author A.J. thanks Kamal Youcef-Toumi, Boris Katz, and Antonio Torralba for their support. We thank Antonio Torralba and Tongzhou Wang for helpful discussions.
 <p>This research was supported in part by IBM through the MIT-IBM Watson AI Lab. The research was also partly sponsored by the United States Air Force Research Laboratory and the United States Air Force Artificial Intelligence Accelerator and was accomplished under Cooperative Agreement Number FA8750-19-2-1000. The views and conclusions contained in this document are those of the authors and should not be interpreted as representing the official policies, either expressed or implied, of the United States Air Force or the U.S. Government. The U.S. Government is authorized to reproduce and distribute reprints for Government purposes notwithstanding any copyright notation herein. 
+		</p>
  
 <!--              Website template is borrowed from our <a href="http://ganalyze.csail.mit.edu/">memorable friends</a>.-->
               <!--
@@ -265,6 +279,9 @@
               </p>
               -->
     </div>
+<div class="content_acc">
+<a href="https://accessibility.mit.edu/"><h5>MIT Accessibility</h5></a>
+</div>
 </body>
 
 </html>
